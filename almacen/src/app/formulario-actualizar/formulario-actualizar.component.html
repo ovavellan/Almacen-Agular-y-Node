@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Código"
+               [(ngModel)]="codigo" disabled>
+        <label for="floatingInput">Codigo</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Nombre"
+               [(ngModel)]="nombre" disabled>
+        <label for="floatingInput">Nombre</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Marca"
+               [(ngModel)]="marca" disabled>
+        <label for="floatingInput">Marca</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Modelo"
+               [(ngModel)]="modelo" disabled>
+        <label for="floatingInput">Modelo</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Fecha de Elaboración"
+               [(ngModel)]="fecha_elaboracion" disabled>
+        <label for="floatingInput">Fecha de Elaboración</label>
+      </div>
+
+      <div class="form-floating mb-3">
+        <input type="text" class="form-control" id="floatingInput" placeholder="Cantidad de Unidades"
+               [(ngModel)]="cantidad_unidades">
+        <label for="floatingInput">Cantidad de Unidades</label>
+      </div>
+      <button class="btn btn-primary" (click)="actualizarElectrodomestico()">Actualizar</button>
+    </div>
+  </div>
+</div>
+

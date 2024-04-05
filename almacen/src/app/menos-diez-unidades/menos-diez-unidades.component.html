@@ -1,0 +1,46 @@
+<div class="container mt-4">
+  <h2>Electrodoméstico con Stock menor a 10</h2>
+  <h2>Número de Electrodomésticos: ({{ getNumeroElectrodomesticos() }})</h2>
+
+  <div>
+    <p>
+      El electrodoméstico
+      <strong>{{ electrodomestico[0].nombre }}</strong>
+      de la marca
+      <strong>{{ electrodomestico[0].marca }}</strong>
+      y modelo
+      <strong>{{ electrodomestico[0].modelo }}</strong>,
+      cuenta con
+      <strong>{{ electrodomestico[0].cantidad_unidades }}</strong>
+      unidades, por lo que se debe sacar de bodega más unidades.
+    </p>
+  </div>
+
+  <table class="table table-striped">
+    <thead class="thead-dark">
+    <tr>
+      <th>Código</th>
+      <th>Nombre</th>
+      <th>Marca</th>
+      <th>Modelo</th>
+      <th>Fecha de Elaboración</th>
+      <th>Cantidad de Unidades</th>
+      <th>Acciones</th> <!-- Nueva columna para el botón de actualización -->
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let electrodomestico of todosElectrodomesticos">
+      <td>{{ electrodomestico.codigo }}</td>
+      <td>{{ electrodomestico.nombre }}</td>
+      <td>{{ electrodomestico.marca }}</td>
+      <td>{{ electrodomestico.modelo }}</td>
+      <td>{{ electrodomestico.fecha_elaboracion }}</td>
+      <td>{{ electrodomestico.cantidad_unidades }}</td>
+      <td>
+        <button class="btn btn-primary" (click)="actualizarElectrodomestico(electrodomestico.id)">Actualizar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+

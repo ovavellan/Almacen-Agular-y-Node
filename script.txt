@@ -1,0 +1,13 @@
+create database almacen;
+
+create table electrodomestico (
+  id INT NOT NULL AUTO_INCREMENT,
+  codigo VARCHAR(20) DEFAULT NULL,
+  nombre VARCHAR(50) DEFAULT NULL,
+  marca VARCHAR(50) DEFAULT NULL,
+  modelo VARCHAR(50) DEFAULT NULL,
+  fecha_elaboracion VARCHAR(20) DEFAULT NULL,
+  cantidad_unidades INT DEFAULT NULL,
+  PRIMARY KEY (id),
+  UNIQUE KEY codigo (codigo)
+)
